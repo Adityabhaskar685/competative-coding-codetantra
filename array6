@@ -1,0 +1,16 @@
+import sys
+
+arr = sys.argv[1].split(',')
+
+def lengthIndexMatch(arr):
+	string=""
+	for i in range(len(arr)):
+		if len(arr[i])==i:
+			string+=arr[i]
+	if len(string)>0:
+		return string
+	else:
+		return "no match found"
+	
+
+print(lengthIndexMatch(arr))
