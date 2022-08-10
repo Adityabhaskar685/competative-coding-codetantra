@@ -1,0 +1,22 @@
+import sys
+
+arr = [int(x) for x in sys.argv[1].split(',')]
+s = int(sys.argv[2])
+
+def pairsOfSum(arr, s):
+	string=""
+	for i in range(len(arr)-1):
+		for j in range(i+1,len(arr)):
+			if arr[i]+arr[j]==s:
+				dict={"ii":str(i),"jj":str(j)}
+				if len(string)>1:
+					string+=","+"<"+",".join(dict.values())+">"
+				else:
+					string+="<"+",".join(dict.values())+">"
+	if len(string)>0:
+		return string
+			
+	else:
+		return "no such pairs"
+
+print(pairsOfSum(arr, s))
