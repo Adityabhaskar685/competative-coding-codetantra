@@ -1,0 +1,16 @@
+import sys
+
+S = sys.argv[1]
+
+def consecutiveString(S):
+	new = S[0:2]
+	for i in range(2, len(S)):
+		if S[i] != S[i-1] or S[i] != S[i-2]:
+			new = new +S[i]
+			
+			
+	return new
+	
+	
+
+print(consecutiveString(S))
